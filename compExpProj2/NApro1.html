@@ -1,0 +1,133 @@
+<html>
+  <head>
+    <title>Hello, World! Argon + A-Frame</title>
+    <meta name="description" content="Hello, World! Argon + A-Frame">
+    <script src="resources/js/aframe.min.js"></script>
+    <script src="resources/js/argon.min.js"></script>
+    <script src="build.js"></script>
+    <script src="resources/js/CSS3DArgonRenderer.js"></script>
+    <script src="resources/js/CSS3DArgonHUD.js"></script>
+    <script src="resources/js/aframe-look-at-component.js"></script>
+    <script src="https://rawgit.com/bryik/aframe-bmfont-text-component/master/dist/aframe-bmfont-text-component.min.js">
+    </script>
+    <script src="JavaScript/NApro.js"></script>
+    <link rel="stylesheet" href="resources/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="resources/style.css">
+  </head>
+  <body>
+    <ar-scene>
+      <a-assets>
+        <img id="buzzpin" src="resources/textures/buzz-pin.png">
+        <a-asset-item id="GoldenWolf-obj" src="goldenWolf/GoldenWolf.obj"></a-asset-item>
+        <a-asset-item id="GoldenWolf-mtl" src="goldenWolf/GoldenWolf.mtl"></a-asset-item>
+        <a-asset-item id="Hut-obj" src="hut/afro%20hut.obj"></a-asset-item>
+        <a-asset-item id="Hut-mtl" src="hut/afro%20hut.mtl"></a-asset-item>
+        <a-asset-item id="House-obj" src="woodHouse/woodHouse.obj"></a-asset-item>
+        <a-asset-item id="House-mtl" src="woodHouse/woodHouse.mtl"></a-asset-item>
+        <a-asset-item id="Corn-obj" src="corn/corn.obj"></a-asset-item>
+        <a-asset-item id="Corn-mtl" src="corn/corn.mtl"></a-asset-item>
+      </a-assets>
+        
+    <ar-geopose id="skiles" lla="-84.3955038 33.7734938 298" usepostion="true" userotation="false"> 
+         <a-entity billboard>
+             <a-entity obj-model="obj: #GoldenWolf-obj; mtl: #GoldenWolf-mtl" id="Wolf" position="0 6 0" rotation="0 0 0" scale=".2 .2 .2">
+                    </a-entity>
+           <a-box cursor-listener id="box1" color="red" rotation="0 0 0" position="0 20 0" height="25" width="25" depth="25" visible="true">
+                    <a-animation id="textAnim"
+                       attribute="visible"
+                       begin="clickGT"
+                       dur="1000"             
+                       to="false">
+                    </a-animation> 
+            </a-box>
+                <a-text id="skilesText" text="Within the Creek tribe, clans are people who come from the same grouping of ancestors. These clans are named after animals found within the natural territory of their lands. The Wolf clan, or the Yahalgi, of the Muscogee tribe are related to the Bear clan." color="#FFFFFF" postion="0 -4 0" rotation="0 0 0" scale="10 10 10" align="left" visible="true">
+                </a-text>
+        </a-entity>
+    </ar-geopose>
+        
+    <ar-geopose id="studentCenter" lla="-84.3987908 33.7738583 292" usepostion="true" userotation="false"> 
+         <a-entity billboard>
+           <a-entity obj-model="obj: #Hut-obj; mtl: #Hut-mtl" id="Hut" position="0 6 0" rotation="0 0 0" scale=".2 .2 .2">
+               </a-entity>
+           <a-box cursor-listener id="box2" color="blue" rotation="0 0 0" position="0 20 0" height="25" width="25" depth="25" visible="true">
+                    <a-animation id="textAnim1"
+                       attribute="visible"
+                       begin="clickGT"
+                       dur="1000"             
+                       to="false">
+                    </a-animation> 
+            </a-box>
+             <a-text id="studentCenterText" text="The Creek tribe were not nomadic people. They most often lived in villages in small huts with a shrine in the center of the village." color="#FFFFFF" postion="0 -4 0" rotation="0 0 0" scale="10 10 10" align="left" visible="true">
+                </a-text>
+        </a-entity>
+      </ar-geopose>
+    
+    <ar-geopose id="CRC" lla="-84.4042093 33.7755668 297" usepostion="true" userotation="false"> 
+         <a-entity billboard>
+           <a-entity obj-model="obj: #House-obj; mtl: #House-mtl" id="House" position="0 6 0" rotation="0 0 0" scale=".2 .2 .2">
+               </a-entity>
+           <a-box cursor-listener id="box3" color="green" rotation="0 0 0" position="0 20 0" height="25" width="25" depth="25" visible="true">
+                    <a-animation id="textAnim2"
+                       attribute="visible"
+                       begin="clickGT"
+                       dur="1000"             
+                       to="false">
+                    </a-animation> 
+            </a-box>
+             <a-text id="CRCText" text="One of the major influences the settlers had on the Creek tribe was showing them how to construct houses made from wood." color="#FFFFFF" postion="0 -4 0" rotation="0 0 0" scale="10 10 10" align="left" visible="true">
+                </a-text>
+        </a-entity>
+      </ar-geopose>
+        
+    <ar-geopose id="Home" lla="-84.4016468 33.7862029 288" usepostion="true" userotation="false"> 
+         <a-entity billboard>
+           <a-entity obj-model="obj: #Corn-obj; mtl: #Corn-mtl" id="House" position="0 6 0" rotation="0 0 0" scale=".2 .2 .2">
+               </a-entity>
+           <a-box cursor-listener id="box4" color="orange" rotation="0 0 0" position="0 20 0" height="25" width="25" depth="25" visible="true">
+                    <a-animation id="textAnim2"
+                       attribute="visible"
+                       begin="clickGT"
+                       dur="1000"             
+                       to="false">
+                    </a-animation> 
+            </a-box>
+             <a-text id="TechSquareText" text="Not being nomadic, the Creek often farmed corn and wheat within their villages. If a village got to large, half would split off and create a new village. This new village oftne maintained food relations with its parent village." color="#FFFFFF" postion="0 -4 0" rotation="0 0 0" scale="10 10 10" align="left" visible="true">
+                </a-text>
+        </a-entity>
+      </ar-geopose>
+        
+        
+        
+
+    <a-entity position="0 0 5">
+    <ar-camera>
+        <a-entity id="myCursor" cursor="fuse:true; fuse-timeout: 1000"
+                       position="0 0 -3"
+                       geometry="primitive:ring; radiusInner: 0.1; radiusOuter: 0.15"
+                       material="color:white; opacity:0.5;">
+
+                       <a-animation id="colorAnim1" begin="cursor-fusing" easing="ease-in" attribute="material.color"
+                                   fill="forwards" from="white" to="black" dur="1000"></a-animation>
+                       <a-animation id="colorAnim2" begin="click" easing="ease-in" attribute="material.color"
+                                   fill="forwards" from="black" to="white" dur="500"></a-animation>
+                       <a-animation id="sizeAnim1" begin="cursor-fusing" easing="ease-in" attribute="scale"
+                                    fill="forwards" from="1 1 1" to="1.5 1.5 1.5" dur="1000"></a-animation>
+                       <a-animation id="sizeAnim2" begin="click" easing="ease-in" attribute="scale"
+                                   from="1.5 1.5 1.5" to="1 1 1" dur="500"></a-animation>
+
+        </a-entity>
+      </ar-camera>
+    </a-entity>
+    </ar-scene>
+    </body>
+    <script>
+    //AFRAME.registerComponent('cursor-listener', {
+      //      init: function () {
+
+        //    this.el.addEventListener('click', function (evt){
+          //      this.emit("clickGT")
+        //    });
+        // }
+    //});
+    </script>
+</html>
