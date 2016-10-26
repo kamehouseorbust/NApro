@@ -1,0 +1,189 @@
+<html>
+  <head>
+    <title>Hello, World! Argon + A-Frame</title>
+    <meta name="description" content="Hello, World! Argon + A-Frame">
+    <script src="resources/js/aframe.min.js"></script>
+    <script src="resources/js/argon.min.js"></script>
+    <script src="build.js"></script>
+    <script src="resources/js/CSS3DArgonRenderer.js"></script>
+    <script src="resources/js/CSS3DArgonHUD.js"></script>
+    <script src="resources/js/aframe-look-at-component.js"></script>
+    <script src="https://rawgit.com/bryik/aframe-bmfont-text-component/master/dist/aframe-bmfont-text-component.min.js">
+    </script>
+    <script src="JavaScript/NApro.js"></script>
+    <link rel="stylesheet" href="resources/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="resources/style.css">
+  </head>
+  <body>
+    <ar-scene>
+      <a-assets>
+        <img id="buzzpin" src="resources/textures/buzz-pin.png">
+        <a-asset-item id="GoldenWolf-obj" src="goldenWolf/GoldenWolf.obj"></a-asset-item>
+        <a-asset-item id="GoldenWolf-mtl" src="goldenWolf/GoldenWolf.mtl"></a-asset-item>
+        <a-asset-item id="Hut-obj" src="hut/afro%20hut.obj"></a-asset-item>
+        <a-asset-item id="Hut-mtl" src="hut/afro%20hut.mtl"></a-asset-item>
+        <a-asset-item id="House-obj" src="woodHouse/woodHouse.obj"></a-asset-item>
+        <a-asset-item id="House-mtl" src="woodHouse/woodHouse.mtl"></a-asset-item>
+        <a-asset-item id="Pumpkin-obj" src="carrot/CarrotBrawl.obj"></a-asset-item>
+        <a-asset-item id="Pumpkin-mtl" src="carrot/CarrotBrawl.mtl"></a-asset-item>
+        <a-asset-item id="Rifle-obj" src="rifle/M14.obj"></a-asset-item>
+        <a-asset-item id="Rifle-mtl" src="rifle/M14.mtl"></a-asset-item>
+        <a-asset-item id="Bow-obj" src="Bow/Bow.obj"></a-asset-item>
+        <a-asset-item id="Bow-mtl" src="Bow/Bow.mtl"></a-asset-item>
+        <a-asset-item id="Scroll-obj" src="Scroll/PeevesScroll/PeevesScroll.obj"></a-asset-item>
+        <a-asset-item id="Scroll-mtl" src="Scroll/PeevesScroll/PeevesScroll.mtl"></a-asset-item>
+      </a-assets>
+        
+    <ar-geopose id="skiles" lla="-84.3955038 33.7734938 298" usepostion="true" userotation="false"> 
+         <a-entity billboard>
+             <a-entity obj-model="obj: #GoldenWolf-obj; mtl: #GoldenWolf-mtl" id="Wolf" position="0 6 0" rotation="0 0 0" scale=".2 .2 .2">
+                    </a-entity>
+           <a-box cursor-listener id="box1" color="red" rotation="0 0 0" position="0 20 0" height="25" width="25" depth="25" visible="true">
+                    <a-animation id="textAnim"
+                       attribute="visible"
+                       begin="clickGT"
+                       dur="1000"             
+                       to="false">
+                    </a-animation> 
+            </a-box>
+                <a-text id="skilesText" text="Within the Creek tribe, clans are people who come from the same grouping of ancestors. These clans are named after animals found within the natural territory of their lands. The Wolf clan, or the Yahalgi, of the Muscogee tribe are related to the Bear clan." color="#FFFFFF" postion="0 -4 0" rotation="0 0 0" scale="10 10 10" align="left" visible="true">
+                </a-text>
+        </a-entity>
+    </ar-geopose>
+        
+    <ar-geopose id="studentCenter" lla="-84.3987908 33.7738583 292" usepostion="true" userotation="false"> 
+         <a-entity billboard>
+           <a-entity obj-model="obj: #Hut-obj; mtl: #Hut-mtl" id="Hut" position="0 6 0" rotation="0 0 0" scale=".2 .2 .2">
+               </a-entity>
+           <a-box cursor-listener id="box2" color="blue" rotation="0 0 0" position="0 20 0" height="25" width="25" depth="25" visible="true">
+                    <a-animation id="textAnim1"
+                       attribute="visible"
+                       begin="clickGT"
+                       dur="1000"             
+                       to="false">
+                    </a-animation> 
+            </a-box>
+             <a-text id="studentCenterText" text="The Creek tribe were not nomadic people. They most often lived in villages in small huts with a shrine in the center of the village." color="#FFFFFF" postion="0 -4 0" rotation="0 0 0" scale="10 10 10" align="left" visible="true">
+                </a-text>
+        </a-entity>
+      </ar-geopose>
+    
+    <ar-geopose id="CRC" lla="-84.4042093 33.7755668 297" usepostion="true" userotation="false"> 
+         <a-entity billboard>
+           <a-entity obj-model="obj: #House-obj; mtl: #House-mtl" id="House" position="0 6 0" rotation="0 0 0" scale=".2 .2 .2">
+               </a-entity>
+           <a-box cursor-listener id="box3" color="green" rotation="0 0 0" position="0 20 0" height="25" width="25" depth="25" visible="true">
+                    <a-animation id="textAnim2"
+                       attribute="visible"
+                       begin="clickGT"
+                       dur="1000"             
+                       to="false">
+                    </a-animation> 
+            </a-box>
+             <a-text id="CRCText" text="One of the major influences the settlers had on the Creek tribe was showing them how to construct houses made from wood." color="#FFFFFF" postion="0 -4 0" rotation="0 0 0" scale="10 10 10" align="left" visible="true">
+                </a-text>
+        </a-entity>
+      </ar-geopose>
+        
+    <ar-geopose id="clough" lla="-84.3964148 33.7749203 283" usepostion="true" userotation="false"> 
+         <a-entity billboard>
+           <a-entity obj-model="obj: #Pumpkin-obj; mtl: #Pumpkin-mtl" id="carrot" position="-5 6 0" rotation="0 180 0" scale=".2 .2 .2">
+               </a-entity>
+           <a-box cursor-listener id="box4" color="orange" rotation="0 0 0" position="0 20 0" height="25" width="25" depth="25" visible="true">
+                    <a-animation id="textAnim2"
+                       attribute="visible"
+                       begin="clickGT"
+                       dur="1000"             
+                       to="false">
+                    </a-animation> 
+            </a-box>
+             <a-text id="CloughText" text="Not being nomadic, the Creek often farmed corn, wheat, pumpkins, carrots, and other crops within their villages. If a village got to large, half would split off and create a new village. This new village oftne maintained food relations with its parent village." color="#FFFFFF" postion="0 -3 0" rotation="0 0 0" scale="10 10 10" align="left" visible="true">
+                </a-text>
+        </a-entity>
+      </ar-geopose>
+        
+    <ar-geopose id="stadium" lla="-84.3926141 33.7712852 287" usepostion="true" userotation="false"> 
+         <a-entity billboard>
+           <a-entity obj-model="obj: #Rifle-obj; mtl: #Rifle-mtl" id="rifle" position="-5 6 0" rotation="0 180 0" scale=".2 .2 .2">
+               </a-entity>
+           <a-box cursor-listener id="box4" color="purple" rotation="0 0 0" position="0 20 0" height="25" width="25" depth="25" visible="true">
+                    <a-animation id="textAnim2"
+                       attribute="visible"
+                       begin="clickGT"
+                       dur="1000"             
+                       to="false">
+                    </a-animation> 
+            </a-box>
+             <a-text id="stadiumText" text="Beginning in the 19th century, settlers began moving the Creek tribes out of their homeland. After the American Civil War, for instance, the Creek Nation lost over three million acres of its land, which was around half of their domain." color="#FFFFFF" postion="14 -6 0" rotation="0 0 0" scale="10 10 10" align="left" visible="true">
+                </a-text>
+        </a-entity>
+      </ar-geopose>
+        
+    <ar-geopose id="techSquare" lla="-84.3873196 33.7768153 299" usepostion="true" userotation="false"> 
+         <a-entity billboard>
+           <a-entity obj-model="obj: #Bow-obj; mtl: #Bow-mtl" id="bow" position="0 15 0" rotation="0 180 0" scale="20 20 20">
+               </a-entity>
+           <a-box cursor-listener id="box4" color="pink" rotation="0 0 0" position="0 20 0" height="25" width="25" depth="25" visible="true">
+                    <a-animation id="textAnim2"
+                       attribute="visible"
+                       begin="clickGT"
+                       dur="1000"             
+                       to="false">
+                    </a-animation> 
+            </a-box>
+             <a-text id="techSqaureText" text="The Creeks used several weapons for hunting and warfare. Some of these included bows, clubs, knives, and axes." color="#FFFFFF" postion="14 -6 0" rotation="0 0 0" scale="10 10 10" align="left" visible="true">
+                </a-text>
+        </a-entity>
+      </ar-geopose>
+        
+    <ar-geopose id="techTower" lla="-84.3947916 33.7724173 301" usepostion="true" userotation="false"> 
+         <a-entity billboard>
+           <a-entity obj-model="obj: #Scroll-obj; mtl: #Scroll-mtl" id="scroll" position="0 15 0" rotation="0 90 0" scale=".5 .5 .5">
+               </a-entity>
+           <a-box cursor-listener id="box4" color="white" rotation="0 0 0" position="0 20 0" height="25" width="25" depth="25" visible="true">
+                    <a-animation id="textAnim2"
+                       attribute="visible"
+                       begin="clickGT"
+                       dur="1000"             
+                       to="false">
+                    </a-animation> 
+            </a-box>
+             <a-text id="techTowerText" text="The Creeks had their own alphabet dating to the 1500s. It is believed that this form of written communication stemmed from the ancient Taliwa people." color="#FFFFFF" postion="0 -6 0" rotation="0 0 0" scale="10 10 10" align="left" visible="true">
+                </a-text>
+        </a-entity>
+      </ar-geopose>
+        
+        
+
+    <a-entity position="0 0 5">
+    <ar-camera>
+        <a-entity id="myCursor" cursor="fuse:true; fuse-timeout: 1000"
+                       position="0 0 -3"
+                       geometry="primitive:ring; radiusInner: 0.1; radiusOuter: 0.15"
+                       material="color:white; opacity:0.5;">
+
+                       <a-animation id="colorAnim1" begin="cursor-fusing" easing="ease-in" attribute="material.color"
+                                   fill="forwards" from="white" to="black" dur="1000"></a-animation>
+                       <a-animation id="colorAnim2" begin="click" easing="ease-in" attribute="material.color"
+                                   fill="forwards" from="black" to="white" dur="500"></a-animation>
+                       <a-animation id="sizeAnim1" begin="cursor-fusing" easing="ease-in" attribute="scale"
+                                    fill="forwards" from="1 1 1" to="1.5 1.5 1.5" dur="1000"></a-animation>
+                       <a-animation id="sizeAnim2" begin="click" easing="ease-in" attribute="scale"
+                                   from="1.5 1.5 1.5" to="1 1 1" dur="500"></a-animation>
+
+        </a-entity>
+      </ar-camera>
+    </a-entity>
+    </ar-scene>
+    </body>
+    <script>
+    //AFRAME.registerComponent('cursor-listener', {
+      //      init: function () {
+
+        //    this.el.addEventListener('click', function (evt){
+          //      this.emit("clickGT")
+        //    });
+        // }
+    //});
+    </script>
+</html>
