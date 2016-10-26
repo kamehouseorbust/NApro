@@ -5,8 +5,6 @@ AFRAME.registerComponent('cursor-listener', {
 
             this.el.addEventListener('click', function (evt){
                 this.emit("clickGT")
-            });
-            numberOfClicks++;
-            console.log("Click" + numberOfClicks);    
+            });  
          }
     });
