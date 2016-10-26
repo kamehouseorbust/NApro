@@ -1,7 +1,8 @@
 <html>
   <head>
-    <title>Hello, World! Argon + A-Frame</title>
+    <title>Interactive Histories</title>
     <meta name="description" content="Hello, World! Argon + A-Frame">
+    <!--Loading all scripts-->
     <script src="resources/js/aframe.min.js"></script>
     <script src="resources/js/argon.min.js"></script>
     <script src="build.js"></script>
@@ -16,16 +17,16 @@
   </head>
   <body>
     <ar-scene>
+    <!--Loading all assets-->    
       <a-assets>
-        <img id="buzzpin" src="resources/textures/buzz-pin.png">
         <a-asset-item id="GoldenWolf-obj" src="goldenWolf/GoldenWolf.obj"></a-asset-item>
         <a-asset-item id="GoldenWolf-mtl" src="goldenWolf/GoldenWolf.mtl"></a-asset-item>
         <a-asset-item id="Hut-obj" src="hut/afro%20hut.obj"></a-asset-item>
         <a-asset-item id="Hut-mtl" src="hut/afro%20hut.mtl"></a-asset-item>
         <a-asset-item id="House-obj" src="woodHouse/woodHouse.obj"></a-asset-item>
         <a-asset-item id="House-mtl" src="woodHouse/woodHouse.mtl"></a-asset-item>
-        <a-asset-item id="Pumpkin-obj" src="carrot/CarrotBrawl.obj"></a-asset-item>
-        <a-asset-item id="Pumpkin-mtl" src="carrot/CarrotBrawl.mtl"></a-asset-item>
+        <a-asset-item id="Veggie-obj" src="carrot/CarrotBrawl.obj"></a-asset-item>
+        <a-asset-item id="Veggie-mtl" src="carrot/CarrotBrawl.mtl"></a-asset-item>
         <a-asset-item id="Rifle-obj" src="rifle/M14.obj"></a-asset-item>
         <a-asset-item id="Rifle-mtl" src="rifle/M14.mtl"></a-asset-item>
         <a-asset-item id="Bow-obj" src="Bow/Bow.obj"></a-asset-item>
@@ -33,7 +34,7 @@
         <a-asset-item id="Scroll-obj" src="Scroll/PeevesScroll/PeevesScroll.obj"></a-asset-item>
         <a-asset-item id="Scroll-mtl" src="Scroll/PeevesScroll/PeevesScroll.mtl"></a-asset-item>
       </a-assets>
-        
+   <!--3D Object/Interaction @Skiles-->     
     <ar-geopose id="skiles" lla="-84.3955038 33.7734938 298" usepostion="true" userotation="false"> 
          <a-entity billboard>
              <a-entity obj-model="obj: #GoldenWolf-obj; mtl: #GoldenWolf-mtl" id="Wolf" position="0 6 0" rotation="0 0 0" scale=".2 .2 .2">
@@ -50,7 +51,7 @@
                 </a-text>
         </a-entity>
     </ar-geopose>
-        
+    <!--3D Object/Interaction @Student Center-->     
     <ar-geopose id="studentCenter" lla="-84.3987908 33.7738583 292" usepostion="true" userotation="false"> 
          <a-entity billboard>
            <a-entity obj-model="obj: #Hut-obj; mtl: #Hut-mtl" id="Hut" position="0 6 0" rotation="0 0 0" scale=".2 .2 .2">
@@ -67,7 +68,7 @@
                 </a-text>
         </a-entity>
       </ar-geopose>
-    
+    <!--3D Object/Interaction @CRC--> 
     <ar-geopose id="CRC" lla="-84.4042093 33.7755668 297" usepostion="true" userotation="false"> 
          <a-entity billboard>
            <a-entity obj-model="obj: #House-obj; mtl: #House-mtl" id="House" position="0 6 0" rotation="0 0 0" scale=".2 .2 .2">
@@ -84,10 +85,10 @@
                 </a-text>
         </a-entity>
       </ar-geopose>
-        
+    <!--3D Object/Interaction @Clough-->     
     <ar-geopose id="clough" lla="-84.3964148 33.7749203 283" usepostion="true" userotation="false"> 
          <a-entity billboard>
-           <a-entity obj-model="obj: #Pumpkin-obj; mtl: #Pumpkin-mtl" id="carrot" position="-5 6 0" rotation="0 180 0" scale=".2 .2 .2">
+           <a-entity obj-model="obj: #Veggie-obj; mtl: #Veggie-mtl" id="carrot" position="-5 6 0" rotation="0 180 0" scale=".2 .2 .2">
                </a-entity>
            <a-box cursor-listener id="box4" color="orange" rotation="0 0 0" position="0 20 0" height="25" width="25" depth="25" visible="true">
                     <a-animation id="textAnim2"
@@ -101,7 +102,7 @@
                 </a-text>
         </a-entity>
       </ar-geopose>
-        
+    <!--3D Object/Interaction @Football Stadium-->     
     <ar-geopose id="stadium" lla="-84.3926141 33.7712852 287" usepostion="true" userotation="false"> 
          <a-entity billboard>
            <a-entity obj-model="obj: #Rifle-obj; mtl: #Rifle-mtl" id="rifle" position="-5 6 0" rotation="0 180 0" scale=".2 .2 .2">
@@ -118,7 +119,7 @@
                 </a-text>
         </a-entity>
       </ar-geopose>
-        
+    <!--3D Object/Interaction @Tech Square-->     
     <ar-geopose id="techSquare" lla="-84.3873196 33.7768153 299" usepostion="true" userotation="false"> 
          <a-entity billboard>
            <a-entity obj-model="obj: #Bow-obj; mtl: #Bow-mtl" id="bow" position="0 15 0" rotation="0 180 0" scale="20 20 20">
@@ -135,7 +136,7 @@
                 </a-text>
         </a-entity>
       </ar-geopose>
-        
+    <!--3D Object/Interaction @Tech Tower-->     
     <ar-geopose id="techTower" lla="-84.3947916 33.7724173 301" usepostion="true" userotation="false"> 
          <a-entity billboard>
            <a-entity obj-model="obj: #Scroll-obj; mtl: #Scroll-mtl" id="scroll" position="0 15 0" rotation="0 90 0" scale=".5 .5 .5">
@@ -156,7 +157,7 @@
         
 
     <a-entity position="0 0 5">
-    <ar-camera>
+    <ar-camera id="myCamera">
         <a-entity id="myCursor" cursor="fuse:true; fuse-timeout: 1000"
                        position="0 0 -3"
                        geometry="primitive:ring; radiusInner: 0.1; radiusOuter: 0.15"
@@ -176,14 +177,4 @@
     </a-entity>
     </ar-scene>
     </body>
-    <script>
-    //AFRAME.registerComponent('cursor-listener', {
-      //      init: function () {
-
-        //    this.el.addEventListener('click', function (evt){
-          //      this.emit("clickGT")
-        //    });
-        // }
-    //});
-    </script>
 </html>
